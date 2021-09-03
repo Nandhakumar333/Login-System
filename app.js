@@ -10,6 +10,7 @@ const flash = require("connect-flash");
 const methodOverride = require("method-override");
 app.use(express.static(__dirname + "/public"));
 const mongoose = require("mongoose");
+const path = require("path");
 
 if (typeof localStorage === "undefined" || localStorage === null) {
   var LocalStorage = require("node-localstorage").LocalStorage;
