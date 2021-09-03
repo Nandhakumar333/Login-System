@@ -10,7 +10,6 @@ const flash = require("connect-flash");
 const methodOverride = require("method-override");
 app.use(express.static(__dirname + "/public"));
 const mongoose = require("mongoose");
-const path = require("path");
 
 if (typeof localStorage === "undefined" || localStorage === null) {
   var LocalStorage = require("node-localstorage").LocalStorage;
@@ -33,7 +32,6 @@ app.use(flash());
 app.use(morgan("dev"));
 
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "/public")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
