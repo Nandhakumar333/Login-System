@@ -52,7 +52,7 @@ mongoose.connect(
   }
 );
 
-app.use("/", require("./Routers/User"));
+app.use("/", require("./routers/User"));
 
 app.use((req, res, next) => {
   const err = new Error("Not Found");
