@@ -69,7 +69,7 @@ app.use((err, req, res, next) => {
 });
 
 const server = http.createServer(app);
-let port = process.env.PORT;
+let port = process.env.PORT || 5000;
 server.listen(port, (err) => {
   if (!err) {
     console.log(`Server Running at ${port}`);
